@@ -114,7 +114,7 @@ module.exports = function(Chart) {
 			var watchFor = chartInstance.annotation.options.events;
 			if (chartHelpers.isArray(watchFor) && watchFor.length > 0) {
 				var canvas = chartInstance.chart.canvas;
-				var eventHandler = events.dispatcher.bind(chartInstance);
+				var eventHandler = events.customDispatcher.bind(chartInstance);
 				events.collapseHoverEvents(watchFor).forEach(function(eventName) {
 					chartHelpers.addEvent(canvas, eventName, eventHandler);
 					chartInstance.annotation.onDestroy.push(function() {
