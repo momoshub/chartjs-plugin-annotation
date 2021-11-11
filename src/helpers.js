@@ -137,6 +137,14 @@ module.exports = function(Chart) {
 		}
 	}
 
+  function getNearestItem(annotations, position) {
+    return annotations
+      .filter(function (element) {
+        return element.inRange(position.x, position.y);
+      })
+      .pop();
+  }
+
 	function getNearestItems(annotations, position) {
 		var minDistance = Number.POSITIVE_INFINITY;
 
@@ -179,7 +187,8 @@ module.exports = function(Chart) {
 		adjustScaleRange: adjustScaleRange,
 		getNearestItems: getNearestItems,
 		getEventHandlerName: getEventHandlerName,
-		createMouseEvent: createMouseEvent
+		createMouseEvent: createMouseEvent,
+    	getNearestItem: getNearestItem
 	};
 };
 
