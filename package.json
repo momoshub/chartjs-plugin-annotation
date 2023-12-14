@@ -1,5 +1,5 @@
 {
-  "name": "chartjs-plugin-annotation",
+  "name": "@momos/chartjs-plugin-annotation",
   "description": "Annotations for Chart.js",
   "version": "0.5.7",
   "author": "Evert Timberg <evert.timberg@gmail.com>",
@@ -7,7 +7,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chartjs/chartjs-plugin-annotation.git"
+    "url": "https://github.com/momoshub/chartjs-plugin-annotation"
   },
   "scripts": {
     "test": "gulp lint",
@@ -36,5 +36,8 @@
   },
   "peerDependencies": {
     "chart.js": "^2.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
